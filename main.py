@@ -11,7 +11,7 @@ def load_json():
 def authenticate(data):
     payload = {"grant_type": "refresh_token", "client_id": data['client_id'], "refresh_token": data['user_key']}
     payload = json.dumps(payload)
-    url = "https://account.uipath.com/oauth/token"
+    url = data['url']
     headers = {
         'Content-Type': 'application/json',
         'X-UIPATH-TenantName': data['tenant_name']
