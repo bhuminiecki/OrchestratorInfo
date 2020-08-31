@@ -1,7 +1,7 @@
 {
-  "tenant_name": "INSERT TENANT NAME",
-  "client_id": "INSERT CLIENT ID",
-  "user_key": "INSERT USER KEY",
-  "account_name": "INSERT ACCOUNT NAME",
+  "tenant_name": "[INSERT TENANT NAME]",
+  "client_id": "[INSERT CLIENT ID]",
+  "user_key": "[INSERT USER KEY]",
+  "account_name": "[INSERT ACCOUNT NAME]",
   "url": "https://account.uipath.com/oauth/token"
 }
