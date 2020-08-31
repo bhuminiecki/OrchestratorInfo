@@ -28,12 +28,12 @@ def read_info(data):
         "Authorization": f"Bearer {data['access_token']}",
         'X-UIPATH-TenantName': data['tenant_name']
     }
-    robots = requests.request("GET", url + "/orchestrator_/api/Stats/GetSessionsStats", headers=headers).json()
+    robots = requests.request("GET", f"{url}/orchestrator_/api/Stats/GetSessionsStats", headers=headers).json()
     robot_count = 0
     for robot in robots:
         robot_count += robot['count']
 
-    jobs = requests.request("GET", url + "/orchestrator_/api/Stats/GetJobsStats", headers=headers).json()
+    jobs = requests.request("GET", f"{url}/orchestrator_/api/Stats/GetJobsStats", headers=headers).json()
     successful_jobs = jobs[0]['count']
     failed_jobs = jobs[1]['count']
     print("===============SUMARRY===============")
